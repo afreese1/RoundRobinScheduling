@@ -1,0 +1,41 @@
+`1CS 451                                                     Fall 2017
+Scheduling Simulation                         
+
+
+You are to write an application that will allow us to simulate various 
+scheduling algorithms. In order to test our simulation the data file 
+"Simulation-Data-1.txt" has been prepared.  The file contains a number of 
+lines of data.  Each line contains information about a process and has 
+the following format:
+
+processID Process-Arrival-Time Process-Service-Time
+
+For this assignment we will assume that our system contains one processor
+and that we are using a Round-Robin scheduler.
+
+Your program should allow the user to enter the length of the time quantum 
+that will be used for the round robin scheduler.
+
+Each process should be represented by a process control block (PCB).
+The PCB should be initialized when the process enters the system and
+updated as the process moves through the system.
+
+The simulator should maintain:
+1. a list of PCBs for the processes that are in the ready state.
+2. a list of PCBs for the processes that have completed.
+3. a list of the process(es) that are currently running.
+4. a clock to keep track of the current time.
+
+Your simulator should use separate threads to manage the clock, entry of
+jobs into the system, the scheduling of processes, and moving finished jobs 
+to the finished queue.
+
+Your simulation should produce a file that contains:
+1. the time when each process finishes
+2. the amount of time that each process spent on the ready list
+3. the total time and average time that all processes spent on the ready list.
+4. the time when all processes finished.
+
+You should be using C/C++and Posix threads.
+Assignment is due on 11-15-2017.
+
